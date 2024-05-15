@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Guidy"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".PayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".PostActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".PostActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".PostActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".PostActivity1"
+            android:exported="false" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"/>
+
+        <!-- SignUpActivity는 내부에서만 호출되지만, LoginActivity에서 시작되므로 exported를 true로 설정 -->
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true"/>
+
+        <!-- RegistrationActivity 설정 추가 -->
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="true"/>
+
+        <!-- PaymentActivity 설정, 필요에 따라 유지 -->
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="true"/>
+
+        <activity android:name=".ma" />
+        <activity android:name=".ChatActivity" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Profilelist"
+            android:exported="true"/>
+
+    </application>
+
+</manifest>

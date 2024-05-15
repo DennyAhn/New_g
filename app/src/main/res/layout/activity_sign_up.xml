@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="top">
+
+    <TextView
+        android:id="@+id/tv_e4"
+        android:layout_width="277dp"
+        android:layout_height="149dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textColorLink="#41A2EF"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/tv_e5"
+        android:layout_width="375dp"
+        android:layout_height="49dp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/tv_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        android:id="@+id/tv_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/tv_SignUpEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이메일"
+        android:inputType="date"/>
+
+    <TextView
+        android:id="@+id/tv_e6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/tv_pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PW"
+        android:inputType="textEmailAddress"/>
+
+
+    <TextView
+        android:id="@+id/tv_e7"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <Button
+        android:id="@+id/bt_SignUpConfirm"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border"
+
+        android:text="회원가입 완료" />
+
+
+</LinearLayout>
