@@ -50,7 +50,8 @@ class RegistrationActivity : AppCompatActivity(), PersonAdapter.OnItemClickListe
         // ImageButton 변수 선언 및 초기화
         val buttonIcon: ImageButton = findViewById(R.id.baseline_add)
         buttonIcon.setOnClickListener {
-            setContentView(R.layout.activity_register_post)
+            val intent = Intent(this, ProfileCheck::class.java)
+            startActivity(intent)
         }
     }
 
@@ -64,12 +65,13 @@ class RegistrationActivity : AppCompatActivity(), PersonAdapter.OnItemClickListe
 
     private fun getPersonList(): List<Person> {
         return listOf(
-            Person("좁밥준상", "Details about John"),
-            Person("멸치민재", "Details about Jane"),
-            Person("뿡뿡이기성", "Details about Sam"),
+            Person("좁밥준상", "Details about John", R.drawable.jun),
+            Person("멸치민재", "Details about Jane", R.drawable.jun),
+            Person("뿡뿡이기성", "Details about Sam", R.drawable.gu1),
             // 추가 인물 데이터
         )
     }
+
 
     private fun showLogoutConfirmationDialog() {
         AlertDialog.Builder(this).apply {

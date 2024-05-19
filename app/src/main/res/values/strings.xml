@@ -10,5 +10,6 @@
     <string name="phone_hint">Phone</string>
     <string name="save">Save</string>
     <string name="수정">Save</string>
+    <string name="person_image">Save</string>
 
 </resources>
