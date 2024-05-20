@@ -5,15 +5,14 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class ProfileActivity : AppCompatActivity() {
+class ProfileEdit : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+        setContentView(R.layout.activity_profile_edit)
 
-        // 수정 버튼 클릭 리스너 설정
         val saveButton: Button = findViewById(R.id.profile_save_button)
         saveButton.setOnClickListener {
-            val intent = Intent(this, ProfileEdit::class.java)
+            val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
     }

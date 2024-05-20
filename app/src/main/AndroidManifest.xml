@@ -42,6 +42,8 @@
         <activity
             android:name=".PostActivity1"
             android:exported="false" />
+        <activity android:name=".ProfileEdit" />
+
         <activity
             android:name=".ProfileActivity"
             android:exported="true" />
