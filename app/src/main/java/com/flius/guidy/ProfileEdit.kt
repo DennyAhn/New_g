@@ -12,7 +12,7 @@ class ProfileEdit : AppCompatActivity() {
 
         val saveButton: Button = findViewById(R.id.profile_save_button)
         saveButton.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
+            val intent = Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
         }
     }
