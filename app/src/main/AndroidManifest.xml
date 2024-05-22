@@ -48,9 +48,7 @@
             android:name=".ProfileActivity"
             android:exported="true" />
         <activity android:name=".ProfileCheck" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true" /> <!-- SignUpActivity는 내부에서만 호출되지만, LoginActivity에서 시작되므로 exported를 true로 설정 -->
+
         <activity
             android:name=".SignUpActivity"
             android:exported="true" /> <!-- RegistrationActivity 설정 추가 -->
@@ -61,9 +59,9 @@
             android:name=".PaymentActivity"
             android:exported="true" />
         <activity android:name=".ma" />
-        <activity android:name=".ChatActivity" />
+
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
