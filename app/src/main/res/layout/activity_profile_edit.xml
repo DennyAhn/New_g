@@ -20,9 +20,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="32dp"
         android:scaleType="centerCrop"
-        android:background="@drawable/profile_image_background"
-        app:layout_constraintBottom_toTopOf="@id/profile_name" />
+         />
 
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Name:"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
     <!-- 이름 입력 -->
     <EditText
         android:id="@+id/profile_name"
@@ -32,57 +44,26 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/edit_text_background"
-        android:hint="@string/name_hint"
         android:inputType="textPersonName"
         android:padding="12dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_image" />
+        app:layout_constraintTop_toBottomOf="@id/label_name" />
 
-    <!-- 성별 선택 -->
-    <RadioGroup
-        android:id="@+id/profile_gender_group"
+    <TextView
+        android:id="@+id/label_location"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_name"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/profile_gender_male"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/male" />
-
-        <RadioButton
-            android:id="@+id/profile_gender_female"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/female" />
-    </RadioGroup>
-
-    <!-- 생년월일 입력 -->
-    <EditText
-        android:id="@+id/profile_birthdate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/edit_text_background"
-        android:hint="@string/birthdate_hint"
-        android:inputType="date"
-        android:padding="12dp"
+        android:text="location:"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_gender_group" />
-
+        app:layout_constraintEnd_toEndOf="parent" />
     <!-- 국적 입력 -->
     <EditText
         android:id="@+id/profile_location"
@@ -92,13 +73,58 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/edit_text_background"
-        android:hint="@string/국적"
         android:inputType="text"
         android:padding="12dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_birthdate" />
+        app:layout_constraintTop_toBottomOf="@id/label_location" />
+
+    <!-- 성별 라벨 -->
+    <TextView
+        android:id="@+id/label_gender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Gender:"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/profile_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 성별 입력 -->
+    <EditText
+        android:id="@+id/profile_gender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_gender" />
+
+    <TextView
+        android:id="@+id/label_language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Languages:"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/profile_gender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <!-- 가능 언어 입력 -->
     <EditText
@@ -109,13 +135,12 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/edit_text_background"
-        android:hint ="@string/language"
-        android:inputType="phone"
+        android:inputType="text"
         android:padding="12dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_location" />
+        app:layout_constraintTop_toBottomOf="@id/label_language" />
 
     <!-- 수정 버튼 -->
     <Button
@@ -126,7 +151,7 @@
         android:layout_marginBottom="32dp"
         android:backgroundTint="?attr/colorPrimary"
         android:padding="12dp"
-        android:text="@string/Save"
+        android:text="@string/save"
         android:textColor="@android:color/white"
         app:layout_constraintTop_toBottomOf="@id/profile_language"
         app:layout_constraintEnd_toEndOf="parent"
