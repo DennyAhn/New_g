@@ -3,7 +3,6 @@ package com.flius.guidy
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -43,6 +42,7 @@ class PayActivity : AppCompatActivity() {
         val expiryDate = etExpiryDate.text.toString().trim()
         val cvv = etCvv.text.toString().trim()
 
+        //결제 텍스트가 비어있는 경우와 채워진 경우
         if (name.isEmpty() || email.isEmpty() || cardNumber.isEmpty() || expiryDate.isEmpty() || cvv.isEmpty()) {
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             return
