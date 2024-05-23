@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,11 +15,18 @@
         android:theme="@style/Theme.Guidy"
         tools:targetApi="31">
         <activity
-            android:name=".setProfile"
+            android:name=".ReviewListActivity_F"
             android:exported="false" />
         <activity
-            android:name=".PayActivity"
+            android:name=".PostCheck_F"
             android:exported="false" />
+        <activity
+            android:name=".ReviewListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".setProfile"
+            android:exported="false" />
+
         <activity
             android:name=".ReviewActivity4"
             android:exported="false" />
@@ -42,24 +51,23 @@
         <activity
             android:name=".PostActivity1"
             android:exported="false" />
-        <activity android:name=".ProfileEdit" />
-
         <activity
             android:name=".ProfileActivity"
             android:exported="true" />
-        <activity android:name=".ProfileCheck" />
-
+        <activity
+            android:name=".PayActivity"
+            android:exported="true" />
+        <activity android:name=".PostCheck" />
+        <activity android:name=".ProfileEdit" />
         <activity
             android:name=".SignUpActivity"
             android:exported="true" /> <!-- RegistrationActivity 설정 추가 -->
+        <activity android:name=".Register_post" />
         <activity
             android:name=".RegistrationActivity"
             android:exported="true" /> <!-- PaymentActivity 설정, 필요에 따라 유지 -->
-        <activity
-            android:name=".PaymentActivity"
-            android:exported="true" />
-        <activity android:name=".ma" />
 
+        <activity android:name=".ma" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -70,7 +78,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Profilelist"
+            android:name=".RegistrationActivity_F"
             android:exported="true" />
     </application>
 

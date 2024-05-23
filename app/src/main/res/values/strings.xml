@@ -12,9 +12,10 @@
     <string name="수정">Modify</string>
     <string name="person_image">Save</string>
     <string name="국적">Nationality</string>
-    <string name="gender">Nationality</string>
-
+    <string name="male">Male</string>
+    <string name="female">Female</string>
     <string name="Save">Save</string>
+    <string name="phone_hint">Phone</string>
 
 
 </resources>

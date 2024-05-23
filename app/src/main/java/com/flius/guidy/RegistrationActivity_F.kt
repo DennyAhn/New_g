@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class RegistrationActivity : AppCompatActivity(), PersonAdapter.OnItemClickListener {
+class RegistrationActivity_F : AppCompatActivity(), PersonAdapter.OnItemClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_register_f)
 
         // RecyclerView 설정
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
@@ -47,16 +47,10 @@ class RegistrationActivity : AppCompatActivity(), PersonAdapter.OnItemClickListe
             }
         }
 
-        // ImageButton 변수 선언 및 초기화
-        val buttonIcon: ImageButton = findViewById(R.id.baseline_add)
-        buttonIcon.setOnClickListener {
-            val intent = Intent(this, Register_post::class.java)
-            startActivity(intent)
-        }
     }
 
     override fun onItemClick(person: Person) {
-        val intent = Intent(this, PostCheck::class.java).apply {
+        val intent = Intent(this, PostCheck_F::class.java).apply {
             putExtra(PostCheck.EXTRA_NAME, person.name)
             putExtra(PostCheck.EXTRA_DETAILS, person.details)
         }
@@ -79,7 +73,7 @@ class RegistrationActivity : AppCompatActivity(), PersonAdapter.OnItemClickListe
             setMessage("정말로 로그아웃 하시겠습니까?")
             setPositiveButton("예") { _, _ ->
                 // 로그인 화면으로 이동
-                val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
+                val intent = Intent(this@RegistrationActivity_F, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
             }

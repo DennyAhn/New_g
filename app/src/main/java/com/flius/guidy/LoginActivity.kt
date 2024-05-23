@@ -7,7 +7,6 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
-import com.flius.guidy.Profilelist
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var tv_LoginEmail: EditText
@@ -40,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.bt_radioForeign -> {
-                    val intent = Intent(this, Profilelist::class.java)
+                    val intent = Intent(this, RegistrationActivity_F::class.java)
                     startActivity(intent)
                 }
             }
